@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Soundboard for Hackerspace Brixel",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js"
   },

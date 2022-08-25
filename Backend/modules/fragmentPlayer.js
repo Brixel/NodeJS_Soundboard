@@ -1,5 +1,5 @@
 import Audic from 'audic';
-export { playSound, cancelSounds };
+export { playSound, cancelSound, pauseSound };
 
 let audic;
 const playSound = async (fragment) => {
@@ -10,6 +10,10 @@ const playSound = async (fragment) => {
     });
 }
 
-const cancelSounds = () => {
+const cancelSound = () => {
     audic.destroy();
+}
+
+const pauseSound = () => {
+    audic.pause();
 }
