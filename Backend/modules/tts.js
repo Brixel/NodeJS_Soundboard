@@ -1,4 +1,3 @@
-export { ttsGenerateWavFile, ttsGetVoices, ttsSay }
 import say from 'say'
 
 const ttsSay = async (text, voice, speed) => {
@@ -28,3 +27,5 @@ const ttsGenerateWavFile = async (text, voice, speed, fileName) => {
         console.log(`Text has been saved to ${filename}`)
     })
 }
+
+export { ttsGenerateWavFile, ttsGetVoices, ttsSay }
