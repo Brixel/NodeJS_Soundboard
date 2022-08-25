@@ -1,0 +1,32 @@
+{
+  "name": "nodejs_soundboard",
+  "version": "0.0.1",
+  "description": "Soundboard for Hackerspace Brixel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brixel/NodeJS_Soundboard.git"
+  },
+  "keywords": [
+    "TTS",
+    "Soundboard",
+    "Brixel"
+  ],
+  "author": "Kenny-Lacroix",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Brixel/NodeJS_Soundboard/issues"
+  },
+  "homepage": "https://github.com/Brixel/NodeJS_Soundboard#readme",
+  "dependencies": {
+    "audic": "^3.0.1",
+    "dotenv": "^16.0.1",
+    "mqtt": "^4.3.7",
+    "prettier": "^2.7.1",
+    "say": "^0.16.0",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}

@@ -1,0 +1,36 @@
+ {
+  "Fragments":[
+   {
+     "Name": "CTF",
+     "File": "/home/pi/soundboard/effects/CTF_Full.mp3"
+    },
+    {
+      "Name": "Chewbacca",
+      "File": "/home/pi/soundboard/effects/chewbacca.mp3"
+    },
+    {
+      "Name": "Eddy Wally",
+      "File": "/home/pi/soundboard/effects/eddywally.mp3"
+    },
+    {
+      "Name": "Leroy Jenkins",
+      "File": "/home/pi/soundboard/effects/leroy.mp3"
+    },
+    {
+      "Name": "Sad trombone",
+      "File": "/home/pi/soundboard/effects/sadtrombone.mp3"
+    },
+    {
+      "Name": "The Who",
+      "File": "/home/pi/soundboard/effects/thewho.mp3"
+    },
+    {
+      "Name": "Error",
+      "File": "/home/pi/soundboard/effects/error.mp3"
+    },
+    {
+      "Name": "Automatic defenses",
+      "File": "/home/pi/soundboard/effects/autodefense_ep.mp3"
+    }
+  ]
+}
