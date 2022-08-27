@@ -22,9 +22,9 @@ const client = MQTT.connect(connectUrl, {
     MQTT_CLIENT_ID,
     clean: true,
     connectTimeout: 4000,
-    username: process.env.MQTT_UNAME,
-    password: process.env.MQTT_PASSWD,
-    reconnectPeriod: 1000,
+    // username: process.env.MQTT_UNAME,
+    // password: process.env.MQTT_PASSWD,
+    reconnectPeriod: 1000
 })
 //#endregion // Constants //
 
@@ -35,7 +35,7 @@ const mqttTopics = (topics) => {
         topics.map((topic) => {
             let mqttTopic = process.env.MQTT_ROOT_TOPIC + topic
             client.subscribe([mqttTopic], () => {
-                console.log(`Subscribe to topic '${mqttTopic}'`)
+                console.log(`Subscribed to topic '${mqttTopic}'`)
             });
         });
     })
@@ -43,7 +43,8 @@ const mqttTopics = (topics) => {
 
 const mqttSpawn = new Observable((subscriber) => {
     client.on('message', (topic, payload) => {
-        subscriber.next(`{ ${topic} : ${payload.toString()}}`)
+        let message = { topic: payload.toString() }
+        subscriber.next(message)
     })
     client.on('close', () => {
         console.log("mqtt client disconnected")
