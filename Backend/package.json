@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/Brixel/NodeJS_Soundboard#readme",
   "dependencies": {
-    "audic": "^3.0.1",
     "dotenv": "^16.0.1",
     "mqtt": "^4.3.7",
     "prettier": "^2.7.1",

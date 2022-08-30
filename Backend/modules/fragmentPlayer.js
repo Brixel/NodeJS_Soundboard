@@ -1,21 +1,18 @@
-import Audic from 'audic';
-export { playSound, cancelSound, pauseSound };
+import { exec } from "child_process";
 
-let audic;
-const playSound = async (fragment) => {
-    audic = new Audic(fragment);
-    console.log('play sound')
-    await audic.play();
-    audic.addEventListener('ended', () => {
-        console.log('sound ended')
-        audic.destroy();
+const playSound = async (soundPath, volume) => {
+    let command = ` nvlc ${soundPath} --gain=${volume}`
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.log(`stderr: ${stderr}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
     });
 }
 
-const cancelSound = () => {
-    audic.destroy();
-}
-
-const pauseSound = () => {
-    audic.pause();
-}
+export { playSound };
