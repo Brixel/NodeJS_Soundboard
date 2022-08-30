@@ -42,8 +42,8 @@ const mqttTopics = (topics) => {
 }
 
 const mqttSpawn = new Observable((subscriber) => {
-    client.on('message', (topic, payload) => {
-        let message = { topic: payload.toString() }
+    client.on('message', (t, payload) => {
+        let message = { topic: t, payload: payload.toString() }
         subscriber.next(message)
     })
     client.on('close', () => {

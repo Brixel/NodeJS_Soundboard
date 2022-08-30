@@ -4,8 +4,10 @@ export { playSound, cancelSound, pauseSound };
 let audic;
 const playSound = async (fragment) => {
     audic = new Audic(fragment);
+    console.log('play sound')
     await audic.play();
     audic.addEventListener('ended', () => {
+        console.log('sound ended')
         audic.destroy();
     });
 }
